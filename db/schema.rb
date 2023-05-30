@@ -10,7 +10,11 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
+<<<<<<< HEAD
+ActiveRecord::Schema[7.0].define(version: 2023_05_30_143137) do
+=======
 ActiveRecord::Schema[7.0].define(version: 2023_05_30_135744) do
+>>>>>>> master
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
 
@@ -55,12 +59,17 @@ ActiveRecord::Schema[7.0].define(version: 2023_05_30_135744) do
     t.string "color"
     t.string "thickness"
     t.string "scent"
+<<<<<<< HEAD
+=======
     t.integer "length"
+>>>>>>> master
     t.integer "price"
     t.boolean "used"
     t.boolean "premium"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.string "title"
+    t.string "photo_url"
   end
 
   create_table "users", force: :cascade do |t|
