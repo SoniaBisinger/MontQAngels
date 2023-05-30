@@ -1,5 +1,5 @@
 class ToiletPapersController < ApplicationController
-    before_action :set_toilet_paper, except: [:index, :new, :create]
+    before_action :set_toilet_paper, except: %i[:index, :new, :create]
     
     def index
         @toilet_papers = Toilet_papers.all
