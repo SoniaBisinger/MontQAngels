@@ -1,21 +1,29 @@
 class ToiletPapersController < ApplicationController
 
-    def new
-        @toilet_paper = ToiletPaper.new
-    end
+  def index
+    @toilet_papers = ToiletPaper.all
+  end
 
-    def create
-        @toilet_paper = ToiletPaper.new(toilet_paper_params)
-        if @toilet_paper.save 
-            redirect_to root_path
-        else 
-            render :new, status: :unprocessable_entity
-        end 
-    end 
+  def show
+    @toilet_paper = ToiletPaper.new
+  end
 
-    private 
+  def new
+      @toilet_paper = ToiletPaper.new
+  end
 
-    def toilet_paper_params
-        params.require(:toilet_paper).permit(:color, :thikness, :scent, :lenght, :price, :used, :premium)
-    end 
+  def create
+      @toilet_paper = ToiletPaper.new(toilet_paper_params)
+      if @toilet_paper.save
+          redirect_to root_path
+      else
+          render :new, status: :unprocessable_entity
+      end
+  end
+
+  private
+
+  def toilet_paper_params
+      params.require(:toilet_paper).permit(:color, :thikness, :scent, :lenght, :price, :used, :premium)
+  end
 end
