@@ -1,2 +1,3 @@
 class ToiletPaper < ApplicationRecord
+    
 end

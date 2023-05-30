@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema[7.0].define(version: 2023_05_30_123728) do
+ActiveRecord::Schema[7.0].define(version: 2023_05_30_135744) do
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
 
@@ -53,9 +53,9 @@ ActiveRecord::Schema[7.0].define(version: 2023_05_30_123728) do
 
   create_table "toilet_papers", force: :cascade do |t|
     t.string "color"
-    t.string "thikness"
+    t.string "thickness"
     t.string "scent"
-    t.integer "lenght"
+    t.integer "length"
     t.integer "price"
     t.boolean "used"
     t.boolean "premium"
