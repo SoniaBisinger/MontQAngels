@@ -1,0 +1,49 @@
+h1{
+  color: rgba($color: #32cbe6, $alpha: 1.0);
+  size: 90px;
+  font-weight: 400;
+  text-align: center;
+  padding: 20px;
+  margin-top: 8px;
+}
+
+h2{
+  color: rgba($color: #32cbe6, $alpha: 1.0);
+  size: 60px;
+  text-align: center;
+  padding: 20px;
+}
+
+.image{
+  text-align: center;
+}
+
+.button_parameter{
+  height: 20px;
+  text-align: center;
+  padding: 20px;
+  margin: 10px;
+}
+
+.welcome_button{
+  text-decoration: none;
+  background-color: rgba($color: rgb(50, 203, 230), $alpha: 1.0);
+  box-shadow: 5px 5px 10px rgba($color: #0c0c0c, $alpha: 1.0);
+  color: rgba($color: #ddf7fb, $alpha: 1.0);
+  border: 2px solid rgba($color: rgb(60, 213, 240), $alpha: 1.0);
+  border-radius: 5px;
+  padding: 10px;
+  padding-left: 20px;
+  padding-right: 20px;
+  transition: ease-in-out 1s;
+  &:hover {
+    background: radial-gradient(circle, rgba(50, 203, 230, 1) 0%, rgba(80, 233, 255, 1) 100%);
+    color: rgb(255, 255, 255);
+    border: 5px solid rgba($color: rgb(90, 243, 255), $alpha: 1.0);
+  }
+}
+
+
+.couleur{
+  background-color: #ddf7fb;
+}
