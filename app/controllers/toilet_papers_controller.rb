@@ -16,6 +16,6 @@ class ToiletPapersController < ApplicationController
     private 
 
     def toilet_paper_params
-        params.require(:toilet_paper).permit(:color, :thikness, :scent, :lenght, :price, :used, :premium)
+        params.require(:toilet_paper).permit(:color, :thickness, :scent, :price, :used, :premium, :photo_url, :title)
     end 
 end
