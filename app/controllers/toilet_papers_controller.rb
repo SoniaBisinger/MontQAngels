@@ -22,6 +22,12 @@ class ToiletPapersController < ApplicationController
       end
   end
 
+  def destroy
+    @toilet_paper = ToiletPaper.find(params[:id])
+    @toilet_paper.destroy
+    redirect_to root_path
+  end 
+
   private
 
   def toilet_paper_params
