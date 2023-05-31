@@ -1,5 +1,5 @@
 class ToiletPapersController < ApplicationController
-  skip_before_action :authenticate_user!, only: %i [:index, :show]
+  skip_before_action :authenticate_user!, only: %i [:index, :show],
   before_action :set_toilet_paper, only: %i[:destroy, :update]
 
   def index
