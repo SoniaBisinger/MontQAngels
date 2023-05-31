@@ -1,4 +1,6 @@
 class ToiletPapersController < ApplicationController
+  before_action :set_toilet_paper, only: %i[:destroy, :update]
+  before_action :authenticate_user!, except: %i[:index, :show]
 
   def index
     @toilet_papers = ToiletPaper.all
@@ -9,7 +11,11 @@ class ToiletPapersController < ApplicationController
   end
 
   def new
+    if @user == current_user
       @toilet_paper = ToiletPaper.new
+    else 
+      puts "you have to log-in to create a new product"
+    end 
   end
 
   def create
@@ -22,15 +28,29 @@ class ToiletPapersController < ApplicationController
       end
   end
 
+  def edit
+    if user == current_user
+      @toilet_paper = ToiletPaper.find(params[:id])
+    end 
+  end 
+
+  def update
+    @toilet_paper.update(toilet_paper_params)
+  end 
+
   def destroy
-    @toilet_paper = ToiletPaper.find(params[:id])
     @toilet_paper.destroy
-    redirect_to root_path
+    redirect_to root_pathgit 
   end 
 
   private
 
+  def set_toilet_paper
+    @toilet_paper = ToiletPaper.find(params[:id])
+  end
+
+
   def toilet_paper_params
-      params.require(:toilet_paper).permit(:color, :thikness, :scent, :lenght, :price, :used, :premium)
+      params.require(:toilet_paper).permit(:title, :photo_url, :color, :thikness, :scent, :price, :used, :premium)
   end
 end
