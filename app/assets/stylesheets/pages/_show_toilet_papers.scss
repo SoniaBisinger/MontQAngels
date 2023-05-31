@@ -1,10 +1,10 @@
-.button_retour{
+.button_retour {
   height: 20px;
   padding: 20px;
   margin: 10px;
 }
 
-.back{
+.back {
   text-decoration: none;
   background-color: rgba($color: rgb(50, 203, 230), $alpha: 1.0);
   color: rgba($color: #ddf7fb, $alpha: 1.0);
@@ -14,6 +14,7 @@
   padding-left: 20px;
   padding-right: 20px;
   transition: ease-in-out 1s;
+
   &:hover {
     background: radial-gradient(circle, rgba(50, 203, 230, 1) 0%, rgba(80, 233, 255, 1) 100%);
     color: rgb(255, 255, 255);
@@ -21,24 +22,25 @@
   }
 }
 
-.imagebox{
+.imagebox {
   display: flex;
   justify-content: center;
   background: rgba($color: rgb(170, 240, 253), $alpha: 1.0);
-  > div > img {
+
+  >div>img {
     align-content: center;
     border-radius: 2%;
     margin: 15px;
   }
 }
 
-.information{
+.information {
   display: flex;
   justify-content: center;
 }
 
 
-.description{
+.description {
   margin: 50px;
   border: 2px solid rgba($color: rgb(50, 203, 230), $alpha: 1.0);
   background-color: rgba($color: rgb(206, 246, 253), $alpha: 1.0);
@@ -62,7 +64,7 @@
   border-radius: 15px;
 }
 
-.button_order{
+.button_order {
   height: 15px;
   padding: 20px;
   margin: 10px;
@@ -70,11 +72,11 @@
   align-self: center;
 }
 
-h1{
+h1 {
   margin-bottom: 40px;
 }
 
-h2{
+h2 {
   color: rgba($color: rgb(5, 158, 185), $alpha: 1.0);
 }
 
@@ -83,7 +85,7 @@ h3 {
   color: rgba($color: rgb(5, 158, 185), $alpha: 1.0);
 }
 
-.input{
+.input {
   margin-bottom: 10px;
   margin-left: 20px;
   margin-right: 20px;
@@ -92,7 +94,7 @@ h3 {
   border: 1px solid rgba($color: rgb(5, 158, 185), $alpha: 1.0);
 }
 
-.order{
+.order {
   text-decoration: none;
   background-color: rgba($color: rgb(75, 228, 255), $alpha: 1.0);
   color: rgba($color: #ddf7fb, $alpha: 1.0);
@@ -102,9 +104,17 @@ h3 {
   padding-left: 20px;
   padding-right: 20px;
   transition: ease-in-out 1s;
+
   &:hover {
     background: radial-gradient(circle, rgba(50, 203, 230, 1) 0%, rgba(80, 233, 255, 1) 100%);
     color: rgb(255, 255, 255);
     border: 5px solid rgba($color: rgb(90, 243, 255), $alpha: 1.0);
   }
+}
+
+#reservationSquareMore {
+  justify-content: center;
+  height: 500px;
+  width: 400px;
+  margin: auto;
 }
