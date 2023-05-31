@@ -13,7 +13,8 @@ class ToiletPapersController < ApplicationController
   end
 
   def create
-      @toilet_paper = ToiletPaper.new(toilet_paper_params)
+    @toilet_paper = ToiletPaper.new(toilet_paper_params)
+    @toilet_paper.user = current_user
       if @toilet_paper.save
           redirect_to root_path
       else
