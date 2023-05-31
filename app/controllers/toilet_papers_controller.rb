@@ -11,10 +11,10 @@ class ToiletPapersController < ApplicationController
   end
 
   def new
-    if @user == current_user
+    if user_signed_in?
       @toilet_paper = ToiletPaper.new
     else
-      puts "you have to log-in to create a new product"
+      redirect_to toilet_papers_path
     end
   end
 
@@ -22,7 +22,7 @@ class ToiletPapersController < ApplicationController
     @toilet_paper = ToiletPaper.new(toilet_paper_params)
     @toilet_paper.user = current_user
     if @toilet_paper.save
-      redirect_to root_path
+      redirect_to toilet_papers_path
     else
       render :new, status: :unprocessable_entity
     end
@@ -40,7 +40,7 @@ class ToiletPapersController < ApplicationController
 
   def destroy
     @toilet_paper.destroy
-    redirect_to root_pathgit
+    redirect_to root_path
   end
 
   private
