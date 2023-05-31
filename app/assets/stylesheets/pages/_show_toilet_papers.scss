@@ -1,0 +1,110 @@
+.button_retour{
+  height: 20px;
+  padding: 20px;
+  margin: 10px;
+}
+
+.back{
+  text-decoration: none;
+  background-color: rgba($color: rgb(50, 203, 230), $alpha: 1.0);
+  color: rgba($color: #ddf7fb, $alpha: 1.0);
+  border: 2px solid rgba($color: rgb(0, 148, 175), $alpha: 1.0);
+  border-radius: 5px;
+  padding: 10px;
+  padding-left: 20px;
+  padding-right: 20px;
+  transition: ease-in-out 1s;
+  &:hover {
+    background: radial-gradient(circle, rgba(50, 203, 230, 1) 0%, rgba(80, 233, 255, 1) 100%);
+    color: rgb(255, 255, 255);
+    border: 5px solid rgba($color: rgb(90, 243, 255), $alpha: 1.0);
+  }
+}
+
+.imagebox{
+  display: flex;
+  justify-content: center;
+  background: rgba($color: rgb(170, 240, 253), $alpha: 1.0);
+  > div > img {
+    align-content: center;
+    border-radius: 2%;
+    margin: 15px;
+  }
+}
+
+.information{
+  display: flex;
+  justify-content: center;
+}
+
+
+.description{
+  margin: 50px;
+  border: 2px solid rgba($color: rgb(50, 203, 230), $alpha: 1.0);
+  background-color: rgba($color: rgb(206, 246, 253), $alpha: 1.0);
+  padding: 10px;
+  width: 700px;
+  height: 500px;
+  border-radius: 15px;
+}
+
+.reservationSquare {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  margin: 50px;
+  border: 2px solid rgba($color: rgb(0, 140, 167), $alpha: 1.0);
+  background-color: rgba($color: rgb(206, 246, 253), $alpha: 1.0);
+  padding: 10px;
+  width: 210px;
+  height: 400px;
+  border-radius: 15px;
+}
+
+.button_order{
+  height: 15px;
+  padding: 20px;
+  margin: 10px;
+  margin-bottom: 10px;
+  align-self: center;
+}
+
+h1{
+  margin-bottom: 40px;
+}
+
+h2{
+  color: rgba($color: rgb(5, 158, 185), $alpha: 1.0);
+}
+
+h3 {
+  text-align: center;
+  color: rgba($color: rgb(5, 158, 185), $alpha: 1.0);
+}
+
+.input{
+  margin-bottom: 10px;
+  margin-left: 20px;
+  margin-right: 20px;
+  color: rgba($color: rgb(5, 158, 185), $alpha: 1.0);
+  border-radius: 5%;
+  border: 1px solid rgba($color: rgb(5, 158, 185), $alpha: 1.0);
+}
+
+.order{
+  text-decoration: none;
+  background-color: rgba($color: rgb(75, 228, 255), $alpha: 1.0);
+  color: rgba($color: #ddf7fb, $alpha: 1.0);
+  border: 2px solid rgba($color: rgb(0, 148, 175), $alpha: 1.0);
+  border-radius: 5px;
+  padding: 10px;
+  padding-left: 20px;
+  padding-right: 20px;
+  transition: ease-in-out 1s;
+  &:hover {
+    background: radial-gradient(circle, rgba(50, 203, 230, 1) 0%, rgba(80, 233, 255, 1) 100%);
+    color: rgb(255, 255, 255);
+    border: 5px solid rgba($color: rgb(90, 243, 255), $alpha: 1.0);
+  }
+}
