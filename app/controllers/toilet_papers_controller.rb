@@ -22,6 +22,7 @@ class ToiletPapersController < ApplicationController
     @toilet_paper = ToiletPaper.new(toilet_paper_params)
     @toilet_paper.user = current_user
     if @toilet_paper.save
+      # --- à modifier dès que user-id/toilet_paper INDEX est créé
       redirect_to toilet_papers_path
     else
       render :new, status: :unprocessable_entity
