@@ -1,6 +1,6 @@
 <%= simple_form_for(@toilet_paper) do |f| %>
-  <%= f.select :color, collection: ["pink", "yellow", "black"] %>
-  <%= f.select :thickness, collection: ["single-ply", "2-ply", "3-ply", "4-ply"] %>
+  <%= f.select :color, ["pink", "yellow", "black"] %>
+  <%= f.select :thickness, ["single-ply", "2-ply", "3-ply", "4-ply"] %>
   <%= f.input :scent, placeholder: "Caipirinha, violet, Chanel n° 5"%>
   <%= f.input :price, placeholder: "CHF/roll" %>
   <%= f.input :used, as: :radio_buttons %>
