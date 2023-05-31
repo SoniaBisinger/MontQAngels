@@ -5,6 +5,6 @@ class User < ApplicationRecord
          :recoverable, :rememberable, :validatable
 
   has_many :toilet_papers, dependent: :destroy
-  has_many :bookings, through: :toilet_paper, dependent: :destroy
+  has_many :bookings, through: :toilet_papers, dependent: :destroy
 
 end
