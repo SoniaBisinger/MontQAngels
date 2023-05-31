@@ -19,6 +19,13 @@ hello world !
 <%#MANQUE LA BARRE DES FILTRES %>
 
 <div>
+  /////////////////////
+  <%= ToiletPaper.count %>
+  <% @toilet_papers.each do |paper| %>
+    <%= paper.title %>
+  <% end %>
+  ///////////////////
+
   <% @toilet_papers.each do |paper| %>
     <%= paper.title %>
     <%= link_to toilet_paper_path(toilet_paper), class:"text-decoration-none" do %>
