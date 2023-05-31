@@ -21,13 +21,13 @@ hello world !
 <div>
   <% @toilet_papers.each do |paper| %>
     <%= paper.title %>
-    <%= link_to toilet_paper_path(toilet_paper), class:"text-decoration-none" do %>
-        <div class="card-category" data-aos="zoom-in" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url(<%= asset_path('list_background.jpg') %>)">
-        <%= list.name %>
-      </div>
-    <% end %>
+    <%= image_tag("toilet_paper.jpg", height: '200')%>
+    <%= paper.premium %>
+    <%= paper.price %>
+    <br/>
   <% end %>
 </div>
+
 <br/>
 <br/>
 <%= render "footer" %>
