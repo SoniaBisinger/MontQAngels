@@ -17,15 +17,21 @@
 
 <%#MANQUE LA BARRE DES FILTRES %>
 
+
+<% @toilet_papers.each do |paper| %>
 <div>
-  <% @toilet_papers.each do |paper| %>
-    <%= paper.title %>
-    <%= image_tag("toilet_paper.jpg", height: '200')%>
-    <%= paper.premium %>
-    <%= paper.price %>
+<a class="bouton_show" href="toilet_papers/show">
+    <div class="box">
+      <%= paper.title %>
+      <%= image_tag("toilet_paper.jpg", height: '180')%>
+      <%= paper.premium %>
+      <%= paper.price %>
+    </div>
+</a>
     <br/>
   <% end %>
 </div>
+
 
 <br/>
 <br/>
