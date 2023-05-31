@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema[7.0].define(version: 2023_05_30_135744) do
+ActiveRecord::Schema[7.0].define(version: 2023_05_31_094453) do
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
 
@@ -49,18 +49,27 @@ ActiveRecord::Schema[7.0].define(version: 2023_05_30_135744) do
     t.boolean "validate"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.bigint "user_id"
+    t.bigint "toilet_paper_id"
+    t.index ["toilet_paper_id"], name: "index_bookings_on_toilet_paper_id"
+    t.index ["user_id"], name: "index_bookings_on_user_id"
   end
 
   create_table "toilet_papers", force: :cascade do |t|
     t.string "color"
     t.string "thickness"
     t.string "scent"
-    t.integer "length"
     t.integer "price"
     t.boolean "used"
     t.boolean "premium"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.string "title"
+    t.string "photo_url"
+    t.bigint "user_id"
+    t.bigint "booking_id"
+    t.index ["booking_id"], name: "index_toilet_papers_on_booking_id"
+    t.index ["user_id"], name: "index_toilet_papers_on_user_id"
   end
 
   create_table "users", force: :cascade do |t|
@@ -80,4 +89,8 @@ ActiveRecord::Schema[7.0].define(version: 2023_05_30_135744) do
 
   add_foreign_key "active_storage_attachments", "active_storage_blobs", column: "blob_id"
   add_foreign_key "active_storage_variant_records", "active_storage_blobs", column: "blob_id"
+  add_foreign_key "bookings", "toilet_papers"
+  add_foreign_key "bookings", "users"
+  add_foreign_key "toilet_papers", "bookings"
+  add_foreign_key "toilet_papers", "users"
 end
