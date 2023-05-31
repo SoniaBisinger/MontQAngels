@@ -4,7 +4,7 @@ class User < ApplicationRecord
   devise :database_authenticatable, :registerable,
          :recoverable, :rememberable, :validatable
 
-  has_many :toilet_papers
-  has_many :bookings, through: :toilet_paper
+  has_many :toilet_papers, dependent: :destroy
+  has_many :bookings, through: :toilet_paper, dependent: :destroy
 
 end
