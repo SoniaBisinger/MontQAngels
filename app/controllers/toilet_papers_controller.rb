@@ -4,6 +4,10 @@ class ToiletPapersController < ApplicationController
 
   def index
     @toilet_papers = ToiletPaper.all
+    return unless params[:query].present?
+
+    sql_subquery = "title ILIKE :query OR description ILIKE :query"
+    @toilet_papers = @toilet_papers.where(sql_subquery, query: "%#{params[:query]}%")
   end
 
   def show
