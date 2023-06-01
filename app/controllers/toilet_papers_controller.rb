@@ -4,6 +4,10 @@ class ToiletPapersController < ApplicationController
 
   def index
     @toilet_papers = ToiletPaper.all
+    return unless params[:query].present?
+
+    sql_subquery = "title ILIKE :query OR description ILIKE :query"
+    @toilet_papers = @toilet_papers.where(sql_subquery, query: "%#{params[:query]}%")
   end
 
   def mine
@@ -43,7 +47,7 @@ class ToiletPapersController < ApplicationController
 
   def destroy
     @toilet_paper.destroy
-    redirect_to root_path
+    redirect_to user_toilet_papers_path(current_user), notice: "Toilet paper was successfully destroyed."
   end
 
   private
