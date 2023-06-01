@@ -1,0 +1,62 @@
+.button_retour{
+  height: 20px;
+  padding: 20px;
+  margin: 10px;
+}
+
+.back{
+  text-decoration: none;
+  background-color: rgba($color: rgb(50, 203, 230), $alpha: 1.0);
+  color: rgba($color: #ddf7fb, $alpha: 1.0);
+  border: 2px solid rgba($color: rgb(0, 148, 175), $alpha: 1.0);
+  border-radius: 5px;
+  padding: 10px;
+  padding-left: 20px;
+  padding-right: 20px;
+  transition: ease-in-out 1s;
+  &:hover {
+    background: radial-gradient(circle, rgba(50, 203, 230, 1) 0%, rgba(80, 233, 255, 1) 100%);
+    color: rgb(255, 255, 255);
+    border: 5px solid rgba($color: rgb(90, 243, 255), $alpha: 1.0);
+  }
+}
+
+.h1{
+  color: rgba($color: rgb(50, 203, 230), $alpha: 1.0);
+}
+
+.container {
+  margin-top: 20px;
+  margin-bottom: 40px;
+}
+
+.separation {
+  width: 100%;
+  height: 10px;
+  background-color: rgba(50, 203, 230, 1.0);
+  margin-bottom: 20px;
+}
+
+.tout_les_images {
+  display: flex;
+  justify-content: center;
+  margin-top: 20px;
+  margin-bottom: 40px;
+}
+
+.bouton_show {
+  height: 250px;
+  width: 300px;
+  margin: 20px;
+  color: rgba(0, 143, 170, 1.0);
+}
+
+.box {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  margin-bottom: 10px;
+  position: relative;
+  top: -10px;
+}
