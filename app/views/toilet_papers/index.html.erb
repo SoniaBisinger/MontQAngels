@@ -1,9 +1,8 @@
 
 <%= render "navbar_wagon" %>
 
-<br/>
 <%= link_to "Back", root_path, class: "btn btn-flat" %>
-<br/>
+
 <div class="bar_recherche">
   <%= simple_form_for :search, url: root_path, method: :get do |f| %>
     <div class="search-form-control form-group">
@@ -17,20 +16,27 @@
 
 <%#MANQUE LA BARRE DES FILTRES %>
 
-
-<% @toilet_papers.each do |paper| %>
-<div>
-    <div class="box">
-      <%= paper.title %>
-      <%= image_tag("toilet_paper.jpg", height: '180')%>
-      <%= paper.price %>
-      <%= link_to "Show this toilet paper", toilet_paper_path(paper) %>
+<div class="container">
+  <div class="row">
+    <div class="boxs">
+      <% @toilet_papers.each do |paper| %>
+        <div class="box" id="card-trip">
+          <div class="card-img">
+            <%= image_tag("toilet_paper.jpg", height: "200", width: "100%")%>
+          </div>
+          <div class="card-trip-infos">
+            <h4>
+              <%= paper.title %>
+            </h4>
+          </div>
+          <h2>
+            <%= paper.price %>
+          </h2>
+          <%= link_to "Show this toilet paper", toilet_paper_path(paper) %>
+        </div>
+      <% end %>
     </div>
-    <br/>
-  <% end %>
+  </div>
 </div>
 
-
-<br/>
-<br/>
 <%= render "footer" %>
