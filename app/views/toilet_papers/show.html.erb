@@ -20,23 +20,21 @@
       # Remplacer par le seed
       <div class="image3">
         <%=image_tag("image3.jpg", height: '300') %>
-      </div> 
+      </div>
 
     </div>
 
     <div class="container">
       <div class="row">
         <div class="col">
-          <% @toilet_papers.each do |paper| %>
-          <%= paper.title %>
-          <%= paper.description %>
-          <%= paper.photo_url %>
-          <%= paper.color %>
-          <%= paper.thickness %>
-          <%= paper.scent %>
-          <%= paper.price %>
-          <%= paper.used %>
-          <% end %>
+          <%= @toilet_paper.title %>
+          <%= @toilet_paper.description %>
+          <%= @toilet_paper.photo_url %>
+          <%= @toilet_paper.color %>
+          <%= @toilet_paper.thickness %>
+          <%= @toilet_paper.scent %>
+          <%= @toilet_paper.price %>
+          <%= @toilet_paper.used %>
         </div>
       </div>
     </div>
