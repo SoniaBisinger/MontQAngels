@@ -22,7 +22,7 @@ class ToiletPapersController < ApplicationController
     @toilet_paper = ToiletPaper.new(toilet_paper_params)
     @toilet_paper.user = current_user
     if @toilet_paper.save
-      redirect_to toilet_papers_path
+      redirect_to user_toilet_papers_path(current_user)
     else
       render :new, status: :unprocessable_entity
     end

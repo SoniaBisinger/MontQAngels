@@ -1,0 +1,13 @@
+<h1>Your personal product's list</h1>
+
+<div class="container">
+    <ul>
+    <% @user_toilet_papers.each do |element|%>
+        <li> <%= element.color %></li>
+        <li> <%= element.thickness %></li>
+        <li> <%= element.scent %></li>
+        <li> <%= element.price %></li>
+        <li> <%= element.used %></li>
+    </ul>
+
+</div>
