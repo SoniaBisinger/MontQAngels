@@ -1,0 +1,38 @@
+
+<%= render "navbar_wagon" %>
+
+  <div class="button_retour">
+      <%=link_to "Back", toilet_papers_path, class:"back" %>
+  </div>
+
+  <h1>Your articles on the market</h1>
+
+<div class="container">
+  <div class="row">
+    <div class="col-sm-12 d-flex justify-content-center">
+      <a class="add" href="new">
+        <%= image_tag("add.jpg", height: '240', class: 'rounded')%>
+      </a>
+    </div>
+  </div>
+</div>
+
+<div class="separation"></div>
+
+<div class="tout_les_images">
+  <div class="d-flex flex-wrap justify-content-center align-items-center">
+    <% @toilet_papers.each do |paper| %>
+      <div>
+        <a class="bouton_show" href="show">
+          <div class="box">
+            <%= paper.title %>
+            <%= image_tag("toilet_paper.jpg", height: '180')%>
+            <%= paper.price %>
+          </div>
+        </a>
+      </div>
+    <% end %>
+  </div>
+</div>
+
+<%= render "footer" %>

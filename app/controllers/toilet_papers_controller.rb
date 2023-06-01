@@ -10,6 +10,10 @@ class ToiletPapersController < ApplicationController
     @toilet_papers = @toilet_papers.where(sql_subquery, query: "%#{params[:query]}%")
   end
 
+  def mine
+    @toilet_papers = current_user.toilet_papers
+  end
+
   def show
   end
 

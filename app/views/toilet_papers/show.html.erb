@@ -4,20 +4,20 @@
       <%=link_to "Back", toilet_papers_path, class:"back" %>
     </div>
 
-    <h1>Title of toilet paper</h1>
+    <h1> <%= @toilet_paper.title %> </h1>
     <div class="imagebox">
 
-      # Remplacer par le seed
+
       <div class="image1">
       <%=image_tag("image1.jpg", height: '300')%>
       </div>
 
-      # Remplacer par le seed
+
       <div class="image2">
         <%=image_tag("image2.jpg", height: '300')%>
       </div>
 
-      # Remplacer par le seed
+
       <div class="image3">
         <%=image_tag("image3.jpg", height: '300') %>
       </div>
@@ -27,7 +27,6 @@
     <div class="container">
       <div class="row">
         <div class="col">
-          <%= @toilet_paper.title %>
           <%= @toilet_paper.description %>
           <%= @toilet_paper.photo_url %>
           <%= @toilet_paper.color %>
@@ -38,12 +37,23 @@
         </div>
       </div>
     </div>
+    <div class="reservationSquare">
+          <h3>Location</h3>
+            <input class="input" type="text" name="location">
 
+          <h3>Arrival date</h3>
+            <input class="input" type="date" name="arrivalDate">
+
+          <h3>Quantity</h3>
+            <input class="input" type="number" name="quantity">
+
+          <h3>Price</h3>
+            <input class="input" type="number" name="price">
+      </div>
           <div class="button_order">
             <%=link_to "Order", toilet_papers_path, class:"order" %>
           </div>
         </div>
-
     </div>
 
 <%= render "footer" %>

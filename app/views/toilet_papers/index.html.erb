@@ -39,6 +39,22 @@
 
 <%#MANQUE LA BARRE DES FILTRES %>
 
+<<<<<<< HEAD
+=======
+
+<% @toilet_papers.each do |paper| %>
+<div>
+    <div class="box">
+      <%= link_to paper.title, toilet_paper_path(paper) %>
+      <%= image_tag("toilet_paper.jpg", height: '180')%>
+      <%= paper.price %>
+    </div>
+    <br/>
+  <% end %>
+</div>
+
+
+>>>>>>> master
 <br/>
 <br/>
 <%= render "footer" %>
