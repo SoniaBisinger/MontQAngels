@@ -20,13 +20,12 @@
 
 <% @toilet_papers.each do |paper| %>
 <div>
-<a class="bouton_show" href="toilet_papers/show">
     <div class="box">
       <%= paper.title %>
       <%= image_tag("toilet_paper.jpg", height: '180')%>
       <%= paper.price %>
+      <%= link_to "Show this toilet paper", toilet_paper_path(paper) %>
     </div>
-</a>
     <br/>
   <% end %>
 </div>
