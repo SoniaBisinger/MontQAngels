@@ -6,6 +6,10 @@ class ToiletPapersController < ApplicationController
     @toilet_papers = ToiletPaper.all
   end
 
+  def mine
+    @toilet_papers = current_user.toilet_papers
+  end
+
   def show
   end
 
