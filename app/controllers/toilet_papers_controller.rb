@@ -1,13 +1,12 @@
 class ToiletPapersController < ApplicationController
   skip_before_action :authenticate_user!, only: %i[index show]
-  before_action :set_toilet_paper, only: %i[destroy update]
+  before_action :set_toilet_paper, only: %i[destroy update show]
 
   def index
     @toilet_papers = ToiletPaper.all
   end
 
   def show
-    @toilet_paper = ToiletPaper.new
   end
 
   def new
