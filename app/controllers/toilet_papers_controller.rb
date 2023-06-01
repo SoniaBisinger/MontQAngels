@@ -47,7 +47,7 @@ class ToiletPapersController < ApplicationController
 
   def destroy
     @toilet_paper.destroy
-    redirect_to root_path
+    redirect_to user_toilet_papers_path(current_user), notice: "Toilet paper was successfully destroyed."
   end
 
   private
