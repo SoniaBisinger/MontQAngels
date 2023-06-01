@@ -1,11 +1,16 @@
 <div class="reservationSquare" id="reservationSquareMore">
 <%= simple_form_for(@toilet_paper) do |f| %>
-  <%= f.select :color, ["pink", "yellow", "black"] %>
-  <%= f.select :thickness, ["single-ply", "2-ply", "3-ply", "4-ply"] %>
+  <%= f.input :title, placeholder: "Roll of the future" %>
+  <p>Color</p>
+  <%= f.select :color, ["Black", "Gold", "Pink", "White", "Yellow"]%>
+  <p>Thickness</p>
+  <div class="thickness">
+    <%= f.select :thickness, ["Simple", "X 2", "X 3", "X 4", "X 5"] %>
+  </div>
   <%= f.input :scent, placeholder: "Caipirinha, violet, Chanel n° 5"%>
   <%= f.input :price, placeholder: "CHF/roll" %>
   <%= f.input :used, as: :radio_buttons %>
-  <%= f.input :premium, as: :radio_buttons %>
+  <%= f.input :description, placeholder: "Description..." %>
   <%= f.submit %>
 <% end %>
 </div>
