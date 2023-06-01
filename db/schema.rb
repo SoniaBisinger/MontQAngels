@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema[7.0].define(version: 2023_05_31_123336) do
+ActiveRecord::Schema[7.0].define(version: 2023_06_01_090415) do
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
 
@@ -62,13 +62,13 @@ ActiveRecord::Schema[7.0].define(version: 2023_05_31_123336) do
     t.string "scent"
     t.integer "price"
     t.boolean "used"
-    t.boolean "premium"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.string "title"
     t.string "photo_url"
     t.bigint "user_id"
     t.bigint "booking_id"
+    t.text "description"
     t.index ["booking_id"], name: "index_toilet_papers_on_booking_id"
     t.index ["user_id"], name: "index_toilet_papers_on_user_id"
   end
