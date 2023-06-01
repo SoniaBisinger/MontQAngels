@@ -4,16 +4,29 @@
   color: rgba($color: #38dff9, $alpha: 1.0);
 }
 
-.box{
+.box {
   border-radius: 20px;
   background: rgba(158, 238, 251, 1.0);
   color: rgba($color: rgb(0, 143, 170), $alpha: 1.0);
-  height: 250px;
-  width: 300px;
-  margin: 20px;
+  margin: 8px;
   padding-top: 10px;
   border: 2px solid rgba($color: rgb(0, 148, 175), $alpha: 1.0);
   display: block;
+  box-shadow: 4px 3px 10px #38388b;
+}
+
+.boxs {
+  width: 100%;
+  flex-grow: 1;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  grid-gap: 20px;
+  padding: 28px;
+}
+
+.card-img {
+  width: 100%;
+  margin-top: -10px;
 }
 
 .buttonnbar{

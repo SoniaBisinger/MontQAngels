@@ -4,6 +4,10 @@ class ToiletPapersController < ApplicationController
 
   def index
     @toilet_papers = ToiletPaper.all
+    return unless params[:query].present?
+
+    sql_subquery = "title ILIKE :query OR description ILIKE :query"
+    @toilet_papers = @toilet_papers.where(sql_subquery, query: "%#{params[:query]}%")
   end
 
   def mine
@@ -25,7 +29,7 @@ class ToiletPapersController < ApplicationController
     @toilet_paper = ToiletPaper.new(toilet_paper_params)
     @toilet_paper.user = current_user
     if @toilet_paper.save
-      redirect_to user_toilet_papers_path(current_user)
+      redirect_to mine_toilet_papers_path(current_user)
     else
       render :new, status: :unprocessable_entity
     end
@@ -43,7 +47,7 @@ class ToiletPapersController < ApplicationController
 
   def destroy
     @toilet_paper.destroy
-    redirect_to root_path
+    redirect_to user_toilet_papers_path(current_user), notice: "Toilet paper was successfully destroyed."
   end
 
   private
