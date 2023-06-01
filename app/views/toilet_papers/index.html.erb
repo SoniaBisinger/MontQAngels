@@ -1,22 +1,23 @@
 
 <%= render "navbar_wagon" %>
 
-<br/>
-<%= link_to "Back", root_path, class: "btn btn-flat" %>
-<br/>
-<div class="bar_recherche">
-  <%= simple_form_for :search, url: root_path, method: :get do |f| %>
-    <div class="search-form-control form-group">
-      <input class="form-control string required" type="text" name="search[query]" id="search_query" />
-      <button name="button" type="submit" class="btn btn-flat">
-        <i class="fas fa-search"></i> Search
-      </button>
-    </div>
-  <% end %>
+<div class="d-flex justify-content-center">
+  <div class="button_retour">
+    <%= link_to "Back", root_path, class: "back" %>
+  </div>
+
+  <div class="bar_recherche flex-grow-1">
+    <%= simple_form_for :search, url: root_path, method: :get do |f| %>
+      <div class="search-form-control form-group">
+        <input class="form-control string required" type="text" name="search[query]" id="search_query" />
+        <button name="button" type="submit" class="btn btn-flat">
+          <i class="fas fa-search"></i> Search
+        </button>
+      </div>
+    <% end %>
+  </div>
 </div>
-
 <%#MANQUE LA BARRE DES FILTRES %>
-
 
 <% @toilet_papers.each do |paper| %>
 <div>
