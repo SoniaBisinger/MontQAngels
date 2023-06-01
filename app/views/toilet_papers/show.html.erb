@@ -5,7 +5,6 @@
     </div>
 
     <h1>Title of toilet paper</h1>
-
     <div class="imagebox">
 
       # Remplacer par le seed
@@ -20,35 +19,27 @@
 
       # Remplacer par le seed
       <div class="image3">
-        <%=image_tag("image3.jpg", height: '300')%>
-      </div>
+        <%=image_tag("image3.jpg", height: '300') %>
+      </div> 
 
     </div>
 
-
-    <div class="information">
-
-      <div class="description">
-
-        
-        <h2>Description of the article</h2>
-        # Remplacer par le seed
-        <p class="text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Harum veniam distinctio mollitia, ratione officia excepturi! Sapiente qui praesentium repellat exercitationem iusto ratione minima ut, sint corporis est quis, consequatur mollitia minus accusantium amet sed. Asperiores provident harum nesciunt similique et nulla officia consequatur odit excepturi laudantium at ex vitae, quasi optio sapiente doloremque reiciendis. Hic quaerat porro, repudiandae earum, modi maiores praesentium libero voluptatum repellat dolorum officiis? Exercitationem commodi, eum ipsam, laborum velit iste voluptatem soluta amet iure saepe impedit vero ad asperiores culpa modi, vitae libero suscipit inventore ab magnam! Error minima molestiae animi illo, quis id reiciendis, et a cupiditate, dolorem debitis possimus odio repellat labore. Aperiam itaque laborum omnis sint quam consectetur. Possimus eos quidem, eum iusto doloremque doloribus inventore, molestias id molestiae unde natus quas! Alias sit temporibus optio. Porro nulla architecto quod fugit velit nam reiciendis harum at aut dignissimos suscipit itaque eius inventore, explicabo repudiandae repellendus voluptatum, provident, nesciunt eligendi aperiam!</p>
+    <div class="container">
+      <div class="row">
+        <div class="col">
+          <% @toilet_papers.each do |paper| %>
+          <%= paper.title %>
+          <%= paper.description %>
+          <%= paper.photo_url %>
+          <%= paper.color %>
+          <%= paper.thickness %>
+          <%= paper.scent %>
+          <%= paper.price %>
+          <%= paper.used %>
+          <% end %>
         </div>
-
-        <div class="reservationSquare">
-
-          <h3>Location</h3>
-            <input class="input" type="text" name="location">
-
-          <h3>Arrival date</h3>
-            <input class="input" type="date" name="arrivalDate">
-
-          <h3>Quantity</h3>
-            <input class="input" type="number" name="quantity">
-
-          <h3>Price</h3>
-            <input class="input" type="number" name="price">
+      </div>
+    </div>
 
           <div class="button_order">
             <%=link_to "Order", toilet_papers_path, class:"order" %>
