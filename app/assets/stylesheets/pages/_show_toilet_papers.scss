@@ -60,7 +60,7 @@
   background-color: rgba($color: rgb(206, 246, 253), $alpha: 1.0);
   padding: 10px;
   width: 70%;
-  height: 400px;
+  height: 400vh;
   border-radius: 15px;
   box-shadow: 4px 3px 30px #38388b;
 }
@@ -118,4 +118,8 @@ h3 {
   height: 700px;
   width: 500px;
   margin: auto;
+}
+
+#back_form_new {
+  margin-right: 380px;
 }
