@@ -13,8 +13,8 @@ puts "Creating 5 new users..."
     )
 end
 puts "Finished users"
-thicknessese = ["single-ply", "2-ply", "3-ply", "4-ply"]
-colors = ["pink", "yellow", "black"]
+thicknessese = ["Simple", "X 2", "X 3", "X 4", "X 5"]
+colors = ["Black", "Gold", "Pink", "White", "Yellow"]
 User.all.each do |user|
     puts "Creating 1 to 5 new toilet papers for user #{user.id}"
     rand(1..5).times.each do
