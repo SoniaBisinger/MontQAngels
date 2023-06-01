@@ -1,4 +1,7 @@
 <div class="reservationSquare" id="reservationSquareMore">
+<div class="button_retour" id="back_form_new">
+  <%=link_to "Back", toilet_papers_path, class:"back" %>
+</div>
 <%= simple_form_for(@toilet_paper) do |f| %>
   <%= f.input :title, placeholder: "Roll of the future" %>
   <p>Color</p>
