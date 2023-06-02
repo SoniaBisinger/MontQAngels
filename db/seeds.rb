@@ -14,7 +14,9 @@ puts "Creating 5 new users..."
 end
 
 puts "Finished users"
-titles = ["SoftSerenity", "CloudComfort", "GentleGrace", "LuxeLoft", "CushyCare", "PurePlush", "FeatherSoft", "WhisperWipe", "VelvetValley", "PuffPurity", "SatinSoothe", "BlissBreeze", "TenderTouch", "DelicateDew", "SilkSavannah", "ComfortCotton", "FluffyFresh", "SereneSheen", "CozyCloud", "GentleGlide"]
+titles = ["SoftSerenity", "CloudComfort", "GentleGrace", "LuxeLoft", "CushyCare", "PurePlush",
+  "FeatherSoft", "WhisperWipe", "VelvetValley", "PuffPurity", "SatinSoothe", "BlissBreeze",
+  "TenderTouch", "DelicateDew", "SilkSavannah", "ComfortCotton", "FluffyFresh", "SereneSheen", "CozyCloud", "GentleGlide"]
 thicknessese = ["Simple", "X 2", "X 3", "X 4", "X 5"]
 colors = ["Black", "Gold", "Pink", "White", "Yellow"]
 
@@ -26,9 +28,9 @@ User.all.each do |user|
             thickness: thicknessese[rand(1..5)],
             scent: Faker::Dessert.flavor,
             price: Faker::Number.number(digits: 2),
-            title: titles[rand(1..20)],
+            title: titles[rand(1..18)],
             description: "Mon papier toilette, c'est le plus écologique de tous! Fabrication artisale !!",
-            photo_url: "image1.jpg",
+            photo_url: "https://source.unsplash.com/random/?toilet&paper",
             user: user
         })
     end
