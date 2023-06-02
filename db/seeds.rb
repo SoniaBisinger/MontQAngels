@@ -8,13 +8,17 @@ puts "Creating 5 new users..."
     first_name: Faker::Name.first_name,
     last_name:  Faker::Name.last_name ,
     email: Faker::Internet.email,
-    password: "topsecret", 
+    password: "topsecret",
     password_confirmation: "topsecret"
     )
 end
+
 puts "Finished users"
-thicknessese = ["Simple", "X 2", "X 3", "X 4", "X 5"]
+
+thickness = ["Simple", "X 2", "X 3", "X 4", "X 5"]
+
 colors = ["Black", "Gold", "Pink", "White", "Yellow"]
+
 User.all.each do |user|
     puts "Creating 1 to 5 new toilet papers for user #{user.id}"
     rand(1..5).times.each do
@@ -26,9 +30,9 @@ User.all.each do |user|
             title: Faker::TvShows::SouthPark.episode_name,
             description: Faker::Coffee.notes,
             photo_url: "image1.jpg",
-            user:
+            user: user
         })
     end
 end
-puts "Finished toilet papers"
 
+puts "Finished toilet papers"
