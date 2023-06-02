@@ -1,5 +1,5 @@
   <%= render "navbar_wagon" %>
-<%= @toilet_paper.description %>
+
     <div class="button_retour">
       <%=link_to "Back", toilet_papers_path, class:"back" %>
     </div>
@@ -39,18 +39,23 @@
     <input class="input" type="number" name="quantity">
 
     <h3>Color</h3>
-    <input class="input" type="text" name="color">
+    <p class="input-color" name="color" readonly><%= @toilet_paper.color %></p>
 
     <h3>Thickness</h3>
-    <input class="input" type="number" name="quantity">
+    <p class="input-thickness" name="number" readonly><%= @toilet_paper.thickness %></p>
 
-    <h3>Sent</h3>
-    <input class="input" type="text" name="smell">
+    <h3>Scent</h3>
+    <p class="input-sent" name="sent" readonly><%= @toilet_paper.scent %></p>
 
     <h3>Price</h3>
-    <input class="input" type="number" name="price">
+    <p class="input-price" name="number" readonly><%= @toilet_paper.price %> CHF</p>
+
+      <div class="button_order">
+      <%=link_to "Order", class:"order" %>
+    </div>
   </div>
 </div>
+
 
 
 <%= render "footer" %>
