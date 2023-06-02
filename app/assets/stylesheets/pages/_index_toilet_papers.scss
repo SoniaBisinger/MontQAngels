@@ -4,7 +4,6 @@
   color: rgba($color: #38dff9, $alpha: 1.0);
 }
 
-
 .boxs {
   display: flex;
   flex-direction: column;
@@ -48,4 +47,31 @@
   font-size: 12px;
   opacity: .7;
   margin: 0;
+}
+
+
+.back {
+  margin-left: 30px;
+}
+
+.all_search {
+  margin: 30px;
+}
+
+.search_button {
+
+  text-decoration: none;
+  background-color: rgba($color: rgb(50, 203, 230), $alpha: 1.0);
+  color: rgba($color: #ffffff, $alpha: 1.0);
+  border: 2px solid rgba($color: rgb(0, 148, 175), $alpha: 1.0);
+  border-radius: 5px;
+  transition: ease-in-out 1s;
+  line-height: 40px;
+
+  /* Adjust the value as needed */
+  &:hover {
+    background: radial-gradient(circle, rgba(50, 203, 230, 1) 0%, rgba(80, 233, 255, 1) 100%);
+    color: rgb(255, 255, 255);
+    border: 5px solid rgba($color: rgb(90, 243, 255), $alpha: 1.0);
+  }
 }
