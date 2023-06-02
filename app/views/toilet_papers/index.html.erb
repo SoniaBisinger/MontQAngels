@@ -23,18 +23,19 @@
     <div class="boxs">
       <% if @toilet_papers.any? %>
         <% @toilet_papers.each do |paper| %>
-          <div class="box" id="card-trip">
+          <div class="box">
             <div class="card-img">
               <%= image_tag("toilet_paper.jpg", height: "200", width: "100%")%>
             </div>
-            <div class="card-trip-infos">
+            <div class="box-infos">
               <h4>
                 <%= paper.title %>
               </h4>
+              <h2>
+                <%= paper.price %> .Chf
+              </h2>
             </div>
-            <h2>
-              <%= paper.price %>
-            </h2>
+            <%= link_to image_tag(""), toilet_paper_path(paper) %>
             <%= link_to "Show this toilet paper", toilet_paper_path(paper) %>
           </div>
         <% end %>
