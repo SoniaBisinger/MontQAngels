@@ -12,7 +12,7 @@
   padding-top: 10px;
   border: 2px solid rgba($color: rgb(0, 148, 175), $alpha: 1.0);
   display: block;
-  box-shadow: 4px 3px 10px #38388b;
+  box-shadow: 4px 3px 10px #6e6e6e;
 }
 
 .boxs {
@@ -29,19 +29,19 @@
   margin-top: -10px;
 }
 
-.buttonnbar{
-  margin: 10px;
-}
-
-.button_retour {
-  padding: 20px;
-}
 
 .back {
-  margin-left: 20px;
+  margin-left: 30px;
+}
+
+.all_search{
+  margin: 30px;
+}
+
+.search_button{
   text-decoration: none;
   background-color: rgba($color: rgb(50, 203, 230), $alpha: 1.0);
-  color: rgba($color: #ddf7fb, $alpha: 1.0);
+  color: rgba($color: #ffffff, $alpha: 1.0);
   border: 2px solid rgba($color: rgb(0, 148, 175), $alpha: 1.0);
   border-radius: 5px;
   transition: ease-in-out 1s;
@@ -51,8 +51,4 @@
     color: rgb(255, 255, 255);
     border: 5px solid rgba($color: rgb(90, 243, 255), $alpha: 1.0);
   }
-}
-
-.bar_recherche{
-  margin: 20px;
 }

@@ -1,25 +1,23 @@
 
 <%= render "navbar_wagon" %>
 
-<div class="d-flex justify-content-center">
-  <div class="button_retour">
-    <%= link_to "Back", root_path, class: "back" %>
-  </div>
+<div class="d-flex align-items-center">
+  <%= link_to "Back", root_path, class: "back" %>
 
-  <%= form_with url: toilet_papers_path, method: :get, class: "d-flex" do %>
+  <div class="all_search flex-grow-1">
+    <%= form_with url: toilet_papers_path, method: :get, class: "d-flex" do %>
       <%= text_field_tag :query,
             params[:query],
-            class: "form-control",
+            class: "search_bar form-control",
             placeholder: "Type a keyword"
         %>
-      <%= submit_tag "Search", name: "", class: "btn btn-primary" %>
-      <% end %>
+      <%= submit_tag "Search", name: "", class: "search_button" %>
+    <% end %>
+  </div>
 </div>
-<%#MANQUE LA BARRE DES FILTRES %>
 
 <div class="container">
   <div class="row">
-
 
     <div class="boxs">
       <% if @toilet_papers.any? %>
