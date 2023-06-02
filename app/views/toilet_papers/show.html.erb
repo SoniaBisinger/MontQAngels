@@ -1,10 +1,11 @@
   <%= render "navbar_wagon" %>
-
+<%= @toilet_paper.description %>
     <div class="button_retour">
       <%=link_to "Back", toilet_papers_path, class:"back" %>
     </div>
 
     <h1> <%= @toilet_paper.title %> </h1>
+
     <div class="imagebox">
 
       <div class="image1">
@@ -21,39 +22,35 @@
 
     </div>
 
-    <div class="container">
-      <div class="row">
-        <div class="col">
-          <%= @toilet_paper.description %>
-          <%= @toilet_paper.photo_url %>
-          <%= @toilet_paper.color %>
-          <%= @toilet_paper.thickness %>
-          <%= @toilet_paper.scent %>
-          <%= @toilet_paper.price %>
-          <%= @toilet_paper.used %>
-        </div>
-      </div>
-    </div>
-    <div class="reservationSquare">
-          <h3>Location</h3>
-            <input class="input" type="text" name="location">
 
-          <h3>Arrival date</h3>
-            <input class="input" type="date" name="arrivalDate">
+    <div class="d-flex">
 
-          <h3>Quantity</h3>
-            <input class="input" type="number" name="quantity">
+  <div class="description">
 
-          <h3>Price</h3>
-            <input class="input" type="number" name="price">
-      </div>
-          <div class="button_order">
-            <%=link_to "Order", toilet_papers_path, class:"order" %>
-          </div>
-          <div class="button_order">
-            <%=link_to "Delete", toilet_papers_path, class:"order" %>
-          </div>
-        </div>
-    </div>
+    <h2>Description of Product</h2>
+    <p class="input-description" name="description" readonly><%= @toilet_paper.description %></p>
+
+  </div>
+
+
+  <div class="reservationSquare">
+
+    <h3>Quantity</h3>
+    <input class="input" type="number" name="quantity">
+
+    <h3>Color</h3>
+    <input class="input" type="text" name="color">
+
+    <h3>Thickness</h3>
+    <input class="input" type="number" name="quantity">
+
+    <h3>Sent</h3>
+    <input class="input" type="text" name="smell">
+
+    <h3>Price</h3>
+    <input class="input" type="number" name="price">
+  </div>
+</div>
+
 
 <%= render "footer" %>
