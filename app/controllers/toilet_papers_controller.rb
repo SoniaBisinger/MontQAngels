@@ -15,6 +15,7 @@ class ToiletPapersController < ApplicationController
   end
 
   def show
+    @toilet_paper = ToiletPaper.find(params[:id])
   end
 
   def new
