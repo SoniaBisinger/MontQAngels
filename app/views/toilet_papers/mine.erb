@@ -10,7 +10,7 @@
 <div class="container">
   <div class="row">
     <div class="col-sm-12 d-flex justify-content-center">
-        <%= image_tag("add.jpg", height: '240', class: 'rounded')%>
+      <%= image_tag("add.jpg", height: '240', class: 'rounded')%>
     </div>
   </div>
 </div>
@@ -21,11 +21,13 @@
   <div class="d-flex flex-wrap justify-content-center align-items-center">
     <% @toilet_papers.each do |paper| %>
       <div>
-        <a class="bouton_show" href="show">
+        <a  href="show">
           <div class="box">
-            <%= link_to paper.title, toilet_paper_path(paper) %>
-            <%= image_tag("toilet_paper.jpg", height: '180')%>
-            <%= paper.price %>
+            <%= image_tag("toilet_paper.jpg", height: "200", width: "100%")%>
+            <div id="box_mine">
+              <%= link_to paper.title, toilet_paper_path(paper) %>
+              <%= paper.price %>.Chf
+            </div>
           </div>
         </a>
       </div>
