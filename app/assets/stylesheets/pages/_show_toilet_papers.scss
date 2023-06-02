@@ -73,13 +73,6 @@
   box-shadow: 4px 3px 30px #909090;
 }
 
-.button_order {
-  height: 15px;
-  padding: 20px;
-  margin: 10px;
-  margin-bottom: 10px;
-  align-self: center;
-}
 
 h1 {
   margin-bottom: 40px;
@@ -103,8 +96,7 @@ h3 {
   border: 1px solid rgba($color: rgb(5, 158, 185), $alpha: 1.0);
 }
 
-.order {
-  text-decoration: none;
+.button_order {
   background-color: rgba($color: rgb(75, 228, 255), $alpha: 1.0);
   color: rgba($color: #ddf7fb, $alpha: 1.0);
   border: 2px solid rgba($color: rgb(0, 148, 175), $alpha: 1.0);
@@ -119,6 +111,11 @@ h3 {
     color: rgb(255, 255, 255);
     border: 5px solid rgba($color: rgb(90, 243, 255), $alpha: 1.0);
   }
+}
+
+a {
+  color: #ffffff;
+  text-decoration: none;
 }
 
 #reservationSquareMore {
