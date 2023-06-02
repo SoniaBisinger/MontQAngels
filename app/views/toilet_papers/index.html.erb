@@ -4,6 +4,7 @@
 <div class="d-flex align-items-center">
   <%= link_to "Back", root_path, class: "back" %>
 
+
   <div class="all_search flex-grow-1">
     <%= form_with url: toilet_papers_path, method: :get, class: "d-flex" do %>
       <%= text_field_tag :query,
